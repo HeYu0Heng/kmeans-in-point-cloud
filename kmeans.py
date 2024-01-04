@@ -27,8 +27,8 @@ class KMeans:
                 new_centroid = np.mean(cluster_points, axis=0)
                 new_centroids.append(new_centroid)
             else:
-                new_centroids = new_centroids.append(self.centroids[cluster_index])
-            self.centroids = new_centroids
+                new_centroids.append(self.centroids[cluster_index])
+        self.centroids = new_centroids
 
 
     def fit(self,max_iterations = 1000000000):
